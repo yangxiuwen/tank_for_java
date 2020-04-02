@@ -6,8 +6,9 @@ public class Main {
 		TankFrame f = new TankFrame();
 		
 		//construct  tanks
+		int initTankCount = Integer.parseInt((String)PropertyMgr.get("initTankCount"));
 		
-		for (int i=0; i<5; i++) {
+		for (int i=0; i<initTankCount; i++) {
 			f.tanks.add(new Tank(50 + i * 60, 200, Dir.DOWN, Group.BAD, f));
 		}
 		while(true) {
